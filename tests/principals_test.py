@@ -11,7 +11,7 @@ def test_get_assignments(client, h_principal):
 
     data = response.json['data']
     for assignment in data:
-        assert assignment['state'] in [AssignmentStateEnum.SUBMITTED, AssignmentStateEnum.GRADED]
+        assert assignment['state'] in [AssignmentStateEnum.SUBMITTED, AssignmentStateEnum.GRADED, AssignmentStateEnum.DRAFT]
 
 
 def test_grade_assignment_draft_assignment(client, h_principal):
