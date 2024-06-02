@@ -39,6 +39,6 @@ def grade_assignment(p, incoming_payload):
 @decorators.authenticate_principal
 def list_teachers(p):
     """Returns list of teachers"""
-    principals_teachers = Teacher.get_teachers_by_principal()
+    principals_teachers = Teacher.get_all_teachers()
     principals_teachers_dump = TeacherSchema().dump(principals_teachers, many=True)
     return APIResponse.respond(data=principals_teachers_dump)

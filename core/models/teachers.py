@@ -13,5 +13,5 @@ class Teacher(db.Model):
         return '<Teacher %r>' % self.id
   
     @classmethod
-    def get_teachers_by_principal(cls):
+    def get_all_teachers(cls):
         return cls.query.all()
